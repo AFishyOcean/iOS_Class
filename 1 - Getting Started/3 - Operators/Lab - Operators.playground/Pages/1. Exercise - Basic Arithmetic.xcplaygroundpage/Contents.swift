@@ -33,8 +33,7 @@ let circumfrence = diameter * pi
 
 print("diameter =", diameter, "circumfrence =", circumfrence)
 //:  Create an integer constant. Using the modulus operator, set its value to the remainder of 12 divided by 5.
-let remainder: Int = 13 % 5
-
+let remainder: Int = 13 % 2
 //:  Create two integer constants, `even` and `odd` and set them to any even integer and any odd integer, respectively. For each, print the remainder of dividing the value by 2. Looking at the results, how do you think you could use the remainder operator to determine if an integer is even or odd?
 let five = 11
 let four = 8
