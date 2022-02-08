@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var lightButton: UIButton!
+    // @IBOutlet weak var lightButton: UIButton!
     
     var lightOn = true
     
@@ -19,11 +19,14 @@ class ViewController: UIViewController {
     }
 
     fileprivate func updateUI() {
-        if lightOn {
-            view.backgroundColor = .black
-        } else {
-            view.backgroundColor = .blue
-        }
+        view.backgroundColor = lightOn ? .white : .black
+        // if lightOn {
+            // view.backgroundColor = .white
+            // lightButton.setTitle("Off", for: .normal)
+        // } else {
+            // view.backgroundColor = .black
+            // lightButton.setTitle("On", for: .normal)
+        // }
     }
     
     @IBAction func buttonPressed(_ sender: Any) {

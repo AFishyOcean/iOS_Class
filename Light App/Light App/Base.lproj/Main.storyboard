@@ -16,10 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7c-BC-55a">
-                                <rect key="frame" x="162" y="407" width="67" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7c-BC-55a">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tZ8-d4-uS4"/>
                                 </connections>
@@ -27,18 +28,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="y7c-BC-55a" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Mdg-vw-xZe"/>
-                            <constraint firstItem="y7c-BC-55a" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="g00-cr-x29"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="lightButton" destination="y7c-BC-55a" id="boa-pZ-rqN"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="84"/>
+            <point key="canvasLocation" x="29.23076923076923" y="83.886255924170612"/>
         </scene>
     </scenes>
     <resources>
