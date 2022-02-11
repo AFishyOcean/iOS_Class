@@ -4,15 +4,22 @@
  If you completed the exercise Structs, Instances, and Default Values, you created a `GPS` struct with default values for properties of `latitude` and `longitude`. Create your `GPS` struct again, but this time do not provide default values. Both properties should be of type `Double`.
  */
 struct GPS {
-
-
+    var longitude: Double
+    var lattitude: Double
 }
 //:  Now create a constant instance of `GPS` called `somePlace`, and use the memberwise initializer to set `latitude` to 51.514004, and `longitude` to 0.125226. Print the values of `somePlace`'s properties.
-
-
+var somePlace = GPS(longitude: 51.514004, lattitude: 0.125226)
+print(somePlace.longitude)
+print(somePlace.lattitude)
 //:  In Structs, Instance, and Default Values, you also created a `Book` struct with properties `title`, `author`, `pages`, and `price`. Create this struct again without default values. Give each property the appropriate type. Declare your `favoriteBook` instance and pass in the values of your favorite book using the memberwise initializer. Print a statement about your favorite book using `favoriteBook`'s properties.
-
-
+struct Book {
+    var title: String
+    var author: String
+    var pages: Int
+    var price: Double
+}
+var favoriteBook = Book(title: "An Ember in the Ashes", author: "Sabaa Tahir", pages: 446, price: 13.99)
+print("\(favoriteBook.title) - \(favoriteBook.author), \(favoriteBook.pages) pages $\(favoriteBook.price)")
 /*:
  Make a `Laptop` struct with three variable properties, `screenSize` of type `Int`, `repairCount` of type `Int`, and `yearPurchased` of type `Int`. Give `screenSize` a default value of `13` and `repairCount` a default value of `0`, and leave `yearPurchased` without a default value. Declare two instances of `Laptop`, using the two provided memberwise initializers.
  */
