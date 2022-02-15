@@ -9,18 +9,26 @@ struct Book {
     var pages: Int
     var price: Double
     
+    func description() {
+        print("\(title) - \(author) Pages: \(pages) Price: $\(price)")
+    }
 }
-
-
+var book = Book(title: "Hitch Hikers Guide", author: "Douglas Adams", pages: 832, price: 15.30)
+print(book.description())
 //:  A `Post` struct has been created for you below, representing a generic social media post. Add a mutating method on `Post` called `like` that will increment `likes` by one. Then create an instance of `Post` and call `like()` on it. Print out the `likes` property before and after calling the method to see whether or not the value was incremented.
 struct Post {
     var message: String
     var likes: Int
     var numberOfComments: Int
-
+    
+    mutating func like() {
+        likes = likes + 1
+    }
 }
-
-
+var post = Post(message: "Testing", likes: 0, numberOfComments: 0)
+print(post.likes)
+post.like()
+print(post.likes)
 /*:
 [Previous](@previous)  |  page 5 of 10  |  [Next: App Exercise - Workout Functions](@next)
  */
