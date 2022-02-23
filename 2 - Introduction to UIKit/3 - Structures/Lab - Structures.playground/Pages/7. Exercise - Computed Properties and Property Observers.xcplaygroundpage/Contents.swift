@@ -45,8 +45,10 @@ struct Height {
         self.heightInCentimeters = heightInCentimeters
         self.heightInInches = heightInCentimeters/2.54
     }
-    
 }
+
+var ranHeight = Height(heightInInches: 9)
+print(ranHeight.heightInCentimeters)
 /*:
 [Previous](@previous)  |  page 7 of 10  |  [Next: App Exercise - Mile Times and Congratulations](@next)
  */
