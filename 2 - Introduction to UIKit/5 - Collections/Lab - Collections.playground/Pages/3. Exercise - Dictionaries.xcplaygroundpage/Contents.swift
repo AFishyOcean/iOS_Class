@@ -3,7 +3,9 @@
 
  Create a variable `[String: Int]` dictionary that can be used to look up the number of days in a particular month. Use a dictionary literal to initialize it with January, February, and March. January contains 31 days, February has 28, and March has 31. Print the dictionary.
  */
-
+// var daysInMonths = ["January": 30, "February": 28, "March": 31, "April": 30, "May": 31, "June": 30, "July": 31, "August": 31, "September": 30, "October": 31, "November": 30, "December": 31]
+var daysInMonths = [String: Int]()
+print(daysInMonths)
 
 //:  Using subscripting syntax to add April to the collection with a value of 30. Print the dictionary.
 
