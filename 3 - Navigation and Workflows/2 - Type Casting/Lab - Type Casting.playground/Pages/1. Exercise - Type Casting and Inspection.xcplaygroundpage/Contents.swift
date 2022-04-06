@@ -3,10 +3,12 @@
 
  Create a collection of type [Any], including a few doubles, integers, strings, and booleans within the collection. Print the contents of the collection.
  */
- 
-
+var collection: [Any] = [5, "jane", 4.5]
+print(collection)
 //:  Loop through the collection. For each integer, print "The integer has a value of ", followed by the integer value. Repeat the steps for doubles, strings and booleans.
- 
+for part in collection {
+    if
+}
 
 //:  Create a [String : Any] dictionary, where the values are a mixture of doubles, integers, strings, and booleans. Print the key/value pairs within the collection
  
