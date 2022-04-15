@@ -8,15 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var Switch: UIView!
+   
+    @IBOutlet weak var Switch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-   
     }
 
     @IBAction func yellowButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "yella", sender: nil)
+        if Switch.isOn {
+        performSegue(withIdentifier: "Yella", sender: nil)
+        }
     }
     
+    @IBAction func greenButtonTapped(_ sender: Any) {
+        if Switch.isOn {
+        performSegue(withIdentifier: "Gweeen", sender: nil)
+        }
+    }
+}

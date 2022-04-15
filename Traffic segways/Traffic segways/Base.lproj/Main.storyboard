@@ -23,7 +23,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Yella"/>
                                 <connections>
-                                    <action selector="yellowButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vlQ-26-4qF"/>
+                                    <action selector="yellowButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dYH-Tg-gJm"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uNp-WP-YAj">
@@ -36,6 +36,9 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Gweeen"/>
+                                <connections>
+                                    <action selector="greenButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aWe-nN-0qb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -43,8 +46,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" id="iTC-gQ-iHI"/>
                     <connections>
-                        <outlet property="Switch" destination="8bC-Xf-vdC" id="xqf-Km-4KF"/>
-                        <outlet property="greenButtonTapped" destination="iyW-SS-d17" id="RNW-d7-6X3"/>
+                        <outlet property="Switch" destination="uNp-WP-YAj" id="PYk-6W-RW5"/>
                         <segue destination="BjT-94-E2I" kind="show" identifier="Yella" id="1R1-3w-RtP"/>
                         <segue destination="fd7-HU-ZbM" kind="show" identifier="Gweeen" id="GX9-1O-gbe"/>
                     </connections>
