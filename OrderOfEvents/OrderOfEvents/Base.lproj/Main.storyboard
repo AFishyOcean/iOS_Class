@@ -66,6 +66,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="QJS-33-LC6"/>
+                    <connections>
+                        <outlet property="existingMiddleText" destination="knF-Zc-dYe" id="H3T-J5-J1G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihi-l8-boh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
