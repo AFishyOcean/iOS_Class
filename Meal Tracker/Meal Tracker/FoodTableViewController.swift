@@ -45,15 +45,18 @@ class FoodTableViewController: UITableViewController {
         return meals[section].food.count
     }
 
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Food", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel.text = meals[indexPath.row].food.name
+        cell.textLabel!.text = meals[indexPath.section].food[indexPath.row].name
+        cell.detailTextLabel!.text = meals[indexPath.section].food[indexPath.row].description
         return cell
    }
-    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return meals[section].name
+    }
     
     
 }
