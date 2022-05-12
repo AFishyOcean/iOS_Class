@@ -17,9 +17,14 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var singleButton3: UIButton!
     @IBOutlet weak var singleButton4: UIButton!
     @IBOutlet weak var multiLabel1: UILabel!
+    @IBOutlet weak var multiSwitch1: UISwitch!
     @IBOutlet weak var multiLabel2: UILabel!
+    @IBOutlet weak var multiSwitch2: UISwitch!
     @IBOutlet weak var multiLabel3: UILabel!
+    @IBOutlet weak var multiSwitch3: UISwitch!
     @IBOutlet weak var multiLabel4: UILabel!
+    @IBOutlet weak var multiSwitch4: UISwitch!
+    @IBOutlet weak var rangedSlider: UISlider!
     @IBOutlet weak var rangedLabel1: UILabel!
     @IBOutlet weak var rangedLabel2: UILabel!
     @IBOutlet weak var rangedStackView: UIStackView!
@@ -67,6 +72,7 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
         updateUI()
     }
+  
     func updateUI() {
         singleStackView.isHidden = true
         multipleStackView.isHidden = true
@@ -90,6 +96,7 @@ class QuestionViewController: UIViewController {
         }
     }
     
+    
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
         let currentAnswers = questions[questionIndex].answers
 
@@ -107,6 +114,49 @@ class QuestionViewController: UIViewController {
         }
         nextQuestion()
     }
+    
+    @IBAction func multipleAnswerButtonPressed() {
+        let currentAnswers = questions[questionIndex].answers
+
+          if multiSwitch1.isOn {
+              answersChosen.append(currentAnswers[0])
+          }
+          if multiSwitch2.isOn {
+              answersChosen.append(currentAnswers[1])
+          }
+          if multiSwitch3.isOn {
+              answersChosen.append(currentAnswers[2])
+          }
+          if multiSwitch4.isOn {
+              answersChosen.append(currentAnswers[3])
+          }
+
+          nextQuestion()
+    }
+    
+    @IBAction func rangedAnswerButtonPressed() {
+        let currentAnswers = questions[questionIndex].answers
+        let index = Int(round(rangedSlider.value * Float(currentAnswers.count - 1)))
+
+        answersChosen.append(currentAnswers[index])
+
+        nextQuestion()
+    }
+    
+    func nextQuestion() {
+        questionIndex += 1
+
+        if questionIndex < questions.count {
+            updateUI()
+        } else {
+          performSegue(withIdentifier: "Results", sender: nil)
+        }
+    }
+    
+    @IBSegueAction func showResults(_ coder: NSCoder) -> ResultsViewController? {
+        return ResultsViewController(coder: coder, responses: answersChosen)
+    }
+    
     func updateSingleStack(using answers: [Answer]) {
         singleStackView.isHidden = false
         singleButton1.setTitle(answers[0].text, for: .normal)
@@ -117,15 +167,19 @@ class QuestionViewController: UIViewController {
     
     func updateMultipleStack(using answers: [Answer]) {
         multipleStackView.isHidden = false
+        multiSwitch1.isOn = false
+        multiSwitch2.isOn = false
+        multiSwitch3.isOn = false
+        multiSwitch4.isOn = false
         multiLabel1.text = answers[0].text
         multiLabel2.text = answers[1].text
         multiLabel3.text = answers[2].text
         multiLabel4.text = answers[3].text
     }
     
-    
     func updateRangedStack(using answers: [Answer]) {
         rangedStackView.isHidden = false
+        rangedSlider.setValue(0.5, animated: false)
         rangedLabel1.text = answers.first?.text
         rangedLabel2.text = answers.last?.text
     }
