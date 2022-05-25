@@ -66,6 +66,9 @@
                     </view>
                     <connections>
                         <outlet property="Label" destination="ra9-M0-4dw" id="dRq-LF-BBY"/>
+                        <outlet property="pauseBTN" destination="7VL-Dp-1Dv" id="Kcx-Pv-QBn"/>
+                        <outlet property="resetBTN" destination="peu-Js-VT0" id="92E-7C-DJ7"/>
+                        <outlet property="startBTN" destination="kps-Rc-zMK" id="oHO-qC-Xob"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
